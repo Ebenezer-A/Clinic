@@ -26,8 +26,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Verify password
             if (password_verify($password, $user["password"])) {
                 // Password is correct, start session
-                $_SESSION["email"] = $email;
-                header("Location: blog.php");
+                $_SESSION["email"] = $user["email"];
+                $_SESSION["first_name"] = $user["first_name"];
+                $_SESSION["last_name"] = $user["last_name"];
+                $_SESSION["phone_number"] = $user["phone_number"];
+                header("Location: index.php");
                 exit();
             } else {
                 echo "Invalid password";

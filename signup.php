@@ -23,8 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Execute the statement
     if ($stmt->execute()) {
-        $_SESSION["email"] = $email;
-        header("Location: blog.php");
+        header("Location: login.html");
         exit();
     } else {
         echo "Error registering user: " . $conn->error;
