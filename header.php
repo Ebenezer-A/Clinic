@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>Otika - Admin Dashboard Template</title>
+  <title>clinic - Admin Dashboard Template</title>
   <!-- General CSS Files -->
   <link rel="stylesheet" href="assets/css/app.min.css">
   <!-- Template CSS -->
@@ -145,7 +145,7 @@
                   </span>
                 </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-icon bg-info text-white"> <i class="fas
 												fa-bell"></i>
-                  </span> <span class="dropdown-item-desc"> Welcome to Otika
+                  </span> <span class="dropdown-item-desc"> Welcome to clinic
                     template! <span class="time">Yesterday</span>
                   </span>
                 </a>
@@ -160,7 +160,7 @@
                 class="user-img-radious-style"> <span class="d-sm-none d-lg-inline-block"></span></a>
             <div class="dropdown-menu dropdown-menu-right pullDown">
               <div class="dropdown-title">Hello Sarah Smith</div>
-              <a href="profile.html" class="dropdown-item has-icon"> <i class="far
+              <a href="profile.php" class="dropdown-item has-icon"> <i class="far
 										fa-user"></i> Profile
               </a> <a href="timeline.html" class="dropdown-item has-icon"> <i class="fas fa-bolt"></i>
                 Activities
