@@ -18,6 +18,8 @@
   <script src="assets/bundles/datatables/export-tables/pdfmake.min.js"></script>
   <script src="assets/bundles/datatables/export-tables/vfs_fonts.js"></script>
   <script src="assets/bundles/datatables/export-tables/buttons.print.min.js"></script>
+  <script src="assets/bundles/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+
   <script src="assets/js/page/datatables.js"></script>
   <!-- Template JS File -->
   <script src="assets/js/scripts.js"></script>
