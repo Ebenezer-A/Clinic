@@ -175,11 +175,7 @@ if (!isset($_SESSION['email'])) {
               <div class="dropdown-title">Hello Sarah Smith</div>
               <a href="profile.php" class="dropdown-item has-icon"> <i class="far
 										fa-user"></i> Profile
-              </a> <a href="timeline.html" class="dropdown-item has-icon"> <i class="fas fa-bolt"></i>
-                Activities
-              </a> <a href="#" class="dropdown-item has-icon"> <i class="fas fa-cog"></i>
-                Settings
-              </a>
+             
               <div class="dropdown-divider"></div>
               <a href="logout.php" class="dropdown-item has-icon text-danger"> <i class="fas fa-sign-out-alt"></i>
                 Logout
