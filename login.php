@@ -30,7 +30,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION["first_name"] = $user["first_name"];
                 $_SESSION["last_name"] = $user["last_name"];
                 $_SESSION["phone_number"] = $user["phone_number"];
-                header("Location: index.php");
+                $_SESSION["role"] = $user["role"];
+                $_SESSION["description"] = $user["description"];
+                $_SESSION["emergency"] = $user["emergency"];
+                $_SESSION["scheduled_for"] = $user["scheduled_for"];
+                header("Location: profile.php");
                 exit();
             } else {
                 echo "Invalid password";

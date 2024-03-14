@@ -5,12 +5,6 @@ session_start();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
-    if (isset($_POST['emergency_status'])) {
-        $selectedValue = $_POST['emergency_status'];
-        echo "Selected value:", $selectedValue; // You can use $selectedValue for further processing
-    } else {
-        echo "No value for emergency selected selected.";
-    }
     $firstName = $_POST['frist_name'];
     $lastName = $_POST['last_name'];
     $email = $_POST['email'];
@@ -23,11 +17,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     {
         return date('w', strtotime($date)) == 0 || date('w', strtotime($date)) == 6;
     }
-
-    // Function to check if current time is past working hours
     function isPastWorkingHours()
     {
-        $workingHoursEnd = 17; // Adjust this value for your working hours end time
+        $workingHoursEnd = 17;
         return date('H') >= $workingHoursEnd;
     }
 
@@ -44,7 +36,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Redirect on error
     if (isset($errorMessage)) {
-        header("Location: profile.php?error=" . urlencode($errorMessage)); // Redirect with error message
+        header("Location: profile.php");
+        $_SESSION['erroe'] = $errorMessage; // Redirect with error message
         exit;
     }
 
@@ -56,8 +49,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['first_name'] = $firstName;
         $_SESSION['last_name'] = $lastName;
         $_SESSION["email"] = $email;
+        $_SESSION["phone_number"] = $phoneNumber;
+        $_SESSION["description"] = $symptomDescription;
+        $_SESSION["emergency"] = $emergencyStatus;
+        $_SESSION["scheduled_for"] = $scheduled_for;
         // Success message (consider redirecting to a success page)
-        echo "User data updated successfully!";
+        header("Location: paitient info.php");
     } else {
         // Error message
         echo "Error updating user data: " . mysqli_error($conn);

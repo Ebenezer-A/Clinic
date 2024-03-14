@@ -2,7 +2,6 @@
 session_start();
 include 'header.php';
 include 'side.php';
-include 'footer.php';
 ?>
 
 <!DOCTYPE html>
@@ -91,3 +90,6 @@ include 'footer.php';
 </body>
 
 </html>
+<?php
+include 'footer.php';
+?>

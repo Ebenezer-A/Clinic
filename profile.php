@@ -1,8 +1,6 @@
 <?php
 include 'header.php';
 include 'side.php';
-
-$error = $_GET['error']
 ?>
 
 <div class="main-content">
@@ -19,7 +17,7 @@ $error = $_GET['error']
                 <div class="row">
                   <div class="form-group col-6">
                     <label for="frist_name">First Name</label>
-                    <input id="frist_name" type="text" class="form-control" name="frist_name" autofocus
+                    <input id="frist_name" type="text" class="form-control" name="frist_name"
                       value="<?php echo $_SESSION["first_name"]; ?>">
                     </div>
                     <div class="form-group col-6">
@@ -44,13 +42,13 @@ $error = $_GET['error']
                       <div class="form-group col-6">
                         <label class="d-block">Status: </lable>
                           <div class="pretty p-default p-curve">
-                            <input type="radio" name="emergency_status" value="YES" />
+                            <input type="radio" name="emergency_status" value="YES" checked="<?php echo $_SESSION['emergency'] == 'FALSE' ? 'checked' : '' ?>" />
                             <div class="state p-primary-o">
                               <label>Normal</label>
                             </div>
                           </div>
                           <div class="pretty p-default p-curve">
-                            <input type="radio" name="emergency_status" value="NO" />
+                            <input type="radio" name="emergency_status" value="NO" checked="<?php echo $_SESSION['emergency'] == 'TRUE' ? 'checked' : '' ?>" />
                             <div class="state p-danger-o">
                               <label>Emergency</label>
                             </div>
@@ -59,15 +57,15 @@ $error = $_GET['error']
                       <div class="form-group col-6">
                         <label>Date Time Picker</label>
                         <input type="datetime-local" class="form-control datetimepicker <?php echo $error ? 'is-invalid' : ''; ?>"
-                          name="scheduled_for" value="<?php echo date('Y-m-d\TH:i'); ?>">
+                          name="scheduled_for" value="<?php echo Date($_SESSION['emergency']); ?>">
                         <div class="invalid-feedback">
-                          <?php echo $error; ?>
+                          <?php echo $_SESSION['error']; ?>
                         </div>
                         </div>
                 </div>
                 <div class="form-group">
                   <label> Simptom Description</label>
-                  <textarea class="form-control" name="simptom_description"></textarea>
+                  <textarea class="form-control" name="simptom_description" value="<?php echo $_SESSION["description"]; ?>"></textarea>
                 </div>
                 <div class="form-group">
                   <button type="submit" class="btn btn-primary btn-lg btn-block">

@@ -64,17 +64,17 @@ include 'side.php';
                     // Loop through each row in the result set
                     while ($row = mysqli_fetch_assoc($result)) {
                         // Output the data in table rows
-                        $_SESSION['patient_email']=$row ['email'];
+                        // $_SESSION['patient_email']=$row ['email'];
                         echo "tr";
-                        echo "<td>" .$row ['Num'];
                         echo "<td>" . $row['first_name'] . "</td>"; // Assuming 'id' is the primary key column
                         echo "<td>" . $row['last_name'] . "</td>";
                         echo "<td>" . $row['email'] . "</td>";
                         echo "<td>" . $row['phone_number'] . "</td>";
                         echo "<td>" . $row['created_at'] . "</td>";
-                        echo "<td><div class='badge badge-" . ($row['status'] == 'Active' ? 'success' :'danger') . "'>" . $row['status'] . "</div></td>";
-                        echo "<td><div class='badge badge-" . ($row['emergency'] == 'Active' ? 'success' :'danger') . "'>" . $row['emergency'] . "</div></td>";
-                        echo "<td><a href='alter.php' class='btn btn-primary'>Detail</a></td>";
+                        echo "<td><div class='badge badge-" . ($row['status'] == 'ACTIVE' ? 'success' : 'danger') . "'>" . $row['status'] . "</div></td>";
+                        echo "<td><div class='badge badge-" . ($row['emergency'] == 'NO' ? 'success' : 'danger') . "'>" . $row['emergency'] . "</div></td>";
+                        echo "<td><a href='alter.php?email=" . $row['email'] . "'' class='btn btn-primary'>Treted</a></td>";
+                        echo "<td><a href='fetch_paitent.php?email=" . $row['email'] . "'' class='btn btn-primary'>Detail</a></td>";
                         echo "</tr>";
                     }
                 } else {
