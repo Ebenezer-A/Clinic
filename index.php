@@ -13,6 +13,7 @@ include 'footer.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Clinic Management System</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    
 </head>
 <style>
     /* style.css */
@@ -40,14 +41,18 @@ include 'footer.php';
 
 /* CSS */
 /* CSS */
-./* CSS */
+/* CSS */
+/* CSS */
 .overlay-text h2 {
     font-size: 2em;
     font-family: monospace;
     margin: 0;
     padding: 10px; /* Add padding */
-    color: #ddd; /* Light gray text color */
-    animation: bounce 1s ease-in-out;
+    color: #015378; /* Light gray text color */
+    position: relative; /* Ensure the h2 is positioned relative */
+    animation: bounce 1s ease-in-out, fadeIn 2s ease-in-out, typeWriterEffect 4s steps(40) forwards;
+    overflow: hidden; /* Hide overflow for the typing effect */
+    white-space: nowrap; /* Ensure text stays on one line */
 }
 
 @keyframes bounce {
@@ -56,15 +61,19 @@ include 'footer.php';
     100% { transform: translateY(0px); }
 }
 
-/* @keyframes fadeIn {
+@keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
 
-@keyframes slideRightToLeft {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(0%); }
-} */
+@keyframes typeWriterEffect {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
 
 
 
@@ -75,7 +84,7 @@ include 'footer.php';
         <div class="image-text-overlay">
             <img src="assets/img/photo1.jpg" alt="Clinic Image">
             <div class="overlay-text">
-                <h2>Welcome to CLINIC</h2>
+                <h2>Welcome to CLINIC...</h2>
             </div>
         </div>
     </main>

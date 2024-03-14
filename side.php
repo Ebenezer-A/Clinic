@@ -20,11 +20,7 @@
               </ul>
             </li>
             <li class="dropdown">
-              <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="activity"></i><span>Doctor</span></a>
-              <ul class="dropdown-menu">
-                <li><a class="nav-link" href="chat.html">Doctor profile</a></li>
-                
-              </ul>
+              <a href="doctor.html" ><i data-feather="activity"></i><span>Doctor</span></a>
             </li>
             <li class="dropdown">
               <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="briefcase"></i><span>About</span></a>

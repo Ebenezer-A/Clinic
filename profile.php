@@ -44,13 +44,13 @@ $error = $_GET['error']
                       <div class="form-group col-6">
                         <label class="d-block">Status: </lable>
                           <div class="pretty p-default p-curve">
-                            <input type="radio" name="emergency_status" value="FALSE" />
+                            <input type="radio" name="emergency_status" value="YES" />
                             <div class="state p-primary-o">
                               <label>Normal</label>
                             </div>
                           </div>
                           <div class="pretty p-default p-curve">
-                            <input type="radio" name="emergency_status" value="TRUE" />
+                            <input type="radio" name="emergency_status" value="NO" />
                             <div class="state p-danger-o">
                               <label>Emergency</label>
                             </div>
